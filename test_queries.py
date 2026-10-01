@@ -8,15 +8,9 @@ Usage:
 from __future__ import annotations
 
 import json
-import os
-import sys
-
-# Import from sibling clinical-trials-agent project
-_PROJECT_ROOT = os.path.join(os.path.dirname(__file__), "..", "clinical-trials-agent")
-sys.path.insert(0, os.path.abspath(_PROJECT_ROOT))
 
 from dotenv import load_dotenv
-load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+load_dotenv()
 
 from tools.clinical_trials_api import compute_fdaaa_status, get_study_by_nct_id
 from jev_fdaaa import determine_fdaaa_with_jev
